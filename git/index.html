@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Git - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../LaTex/" class="nav-link">LaTex</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../algorithm/" class="nav-link">Algorithm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../c%2B%2B/" class="nav-link">C++</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../c/" class="nav-link">C</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Git</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../markdown/" class="nav-link">Markdown</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../network/" class="nav-link">Network</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../python/" class="nav-link">Python</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../terminal/" class="nav-link">Terminal</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../c/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../markdown/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            
+            <li class="nav-item" data-bs-level="1"><a href="#pr" class="nav-link">PR</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>文件三类别:Untracked tracked Ignored
+工作区 &zwj; &zwj; &zwj;add &zwj; &zwj; &zwj; 暂存区 &zwj;  &zwj; &zwj;commit &zwj; &zwj; &zwj; 仓库 &zwj; &zwj; &zwj;push/pull &zwj; &zwj; &zwj; 远程
++ <code>git init (名)</code> 创git仓库,默认为当前
++ git账号全局设置:<code>git config --global user.name "名"</code>
+  &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj;&zwj; &zwj; <code>git config --global user.email "邮箱"</code></p>
+<pre><code>仓库根目录下创.gitignore
+#注释 *.c a/**/b /开头匹配根目录,否则所有目录 !取消忽略
+git check-ignore -v 文件  查看是否忽略
+</code></pre>
+<ul>
+<li>git ls-files 列出跟踪的文件 -t已跟踪文件 -c已暂存文件 -o未跟踪文件</li>
+<li><code>git status</code> &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 查看工作区、暂存区状态</li>
+<li><code>git diff</code> &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 工作区和暂存区差异 
+ <code>git diff 分支</code>&zwj; &zwj; &zwj; 工作区和分支差异
+ <code>git diff 分支1 分支2</code> 两分支差异</li>
+<li><code>git add 文件</code> &zwj; &zwj; &zwj; &zwj; 只暂存修改过的文件,可*.c
+   <code>git add .</code> &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 暂存当前目录所有修改过的文件</li>
+<li><code>git rm --cached 文件</code> 从暂存区中去除</li>
+<li><code>git rm 名1</code> &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 删除本地和仓库的文件
+  <code>git mv 名1 名2</code> mv本地和仓库的文件
+&zwj; 
+&zwj; </li>
+<li><code>git log</code> 查看提交历史--graph显示分支结构 --oneline显示一行 --p显示修改信息</li>
+</ul>
+<pre><code>git commit -m &quot;信息&quot;
+&lt;type&gt;[scope]:&lt;summary&gt;       [body][footer]
+type:fix(修复)feat(新功能)docs(更改)refactor(代码重构)perf(性能测试)test(功能测试)ci(集成测试)BREAKING DEPRECATED
+footer:Fixes #id和Closes #id表示解决
+</code></pre>
+<ul>
+<li><code>git show id</code> 显示具体信息,id为每一提交的标识,不必完整</li>
+<li><code>git tag 名 (id)</code> 创标签，默认head
+   <code>git tag</code> &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 查看标签</li>
+<li>回溯:<code>git checkout id/main</code></li>
+</ul>
+<h4 id="head-main">HEAD MAIN</h4>
+<ul>
+<li>
+<p><code>git branch</code> &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 查看分支
+<code>git branch 标签名 (id)</code>给分支标签名防丢失,默认HEAD
+ <code>git branch 名</code> &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 创分支
+<code>git branch -d 分支名</code> 删除已合并分支
+<code>git branch -D 分支名</code> 强制删除分支</p>
+</li>
+<li>
+<p><code>git checkout 分支</code> &zwj; &zwj; &zwj; (-b创建)切换分支(修改后还要add、commit)</p>
+</li>
+<li><code>git merge 分支</code>合并到当前分支,有冲突,则vscode里选择,add、commit,倾向于多
+&zwj; 
+&zwj;  </li>
+</ul>
+<h3 id="pushpull-github">从本地 push/pull Github仓库</h3>
+<ul>
+<li><code>git clone 仓库网址</code> 创一个目录,账号全局设置
+ &zwj; 再add、commit</li>
+<li><code>git push</code>(不要开外网？)</li>
+<li><code>git reset HEAD~数·</code>回退之前的版本
+<code>git reset --soft</code>保留暂存区和工作区的所有内容，只回溯commit内容
+<code>git reset --hard</code>删除暂存区和工作区的所有内容，回溯commit
+<code>git reset --mixed</code>删除暂存区内容，保留工作区内容，回溯commit</li>
+</ul>
+<pre><code>用令牌登录
+settings-&gt;developer settings-&gt;personal access tokens-&gt;Tokens(classic)-&gt;Generate new token(classic)作为密码
+</code></pre>
+<pre><code>签署commit
+gpg --full-generate-key 均默认 名设为github名
+sec/与日期间的数字串为密钥
+gpg --armor --export 密钥-&gt;公钥
+SSH and GPG keys-&gt;new GPG key
+git commit -S -m &quot;&quot; (输入私钥密码)
+</code></pre>
+<p>可invite collaborators,使之有权限在本地push</p>
+<h1 id="pr">PR</h1>
+<pre><code>fork
+git remote add 仓库别名 网址 -v查看
+git push -u 远程仓库名 main
+contribute里open pull request
+本源仓库pull requests里Merge pull request(可能要Resolve conflicts)
+fork仓库可sync fork里update 在本地git pull 远程仓库名 远程分支名:本地分支名
+pull request后再push会改变pull request内容
+本源仓库可在pull request里Review changes要求fork者更改,可再approve  可直接修改,再commit,会改fork
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

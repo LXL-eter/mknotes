@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>C++ - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../LaTex/" class="nav-link">LaTex</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../algorithm/" class="nav-link">Algorithm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">C++</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../c/" class="nav-link">C</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../git/" class="nav-link">Git</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../markdown/" class="nav-link">Markdown</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../network/" class="nav-link">Network</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../python/" class="nav-link">Python</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../terminal/" class="nav-link">Terminal</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../algorithm/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../c/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            
+            
+            
+            <li class="nav-item" data-bs-level="1"><a href="#include-vector" class="nav-link">include\ 以vector为例</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>.cpp g++
+比c第一级多::(作用域::成员) &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 后置++ --
+第三级为-&gt;<em>(在指针上通过指向成员的指针访问成员) &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; .*(在对象上通过指向成员的指针访问成员)
+&zwj; 
+<code>#inlude&lt;iostream&gt;</code>
+(命名空间)<code>using namespace std;</code>或<code>using std::cin;</code>或直接用<code>std::cin</code>
+<code>cin&gt;&gt;名</code>(可连用)跳过空白先导,回车、空格、tab结束,残留在缓冲区
+<code>cin.get()</code>单个字符
+<code>cout&lt;&lt;名</code>(可连用)endl清空缓冲并换行
+&zwj; 
+可多次声明 <code>using x=y;</code> x为别名
+(传指针比传整体开销小,但要写&amp;x-&amp;y之类的,比较奇怪,所以用引用机制)
++ 引用(要初始化):已存在对象或函数的别名(不必分配内存) &zwj; &zwj; &zwj; <code>int &amp;y=x;</code>y是x本身
+引用可作为参数、返回值,易于修改 不要返回函数内定义的引用
+<code>return *this;</code>(可链式调用)
++ nullptr 空指针常量(可delete) c++不允许void</em>隐式转换 可int <em>p=0即NULL
++ const 常量(要初始化)const int i=6;不可int *p=&i;
+<code>const int* p</code> 可改p,不可改</em>p(指向常量,不是常量) <code>int *const p</code> 可改*p,不可改p(指向变量,不是变量)
+类 名()const; const成员函数,不能改对象的成员(可用于重载)
++ 类里的static变量(只是声明,不与对象关联)要在外初始化
+类型 类::变量=... const static和inline static可在内初始化
+static函数无this,不能用非静态成员变量或函数
++ 隐式转换:x-y产生临时对象,立即析构,可赋给const &amp;·生命周期延长
+临时对象(包括数,不可赋给非const &amp;) int传入int &amp;比const int &amp;好
++ 函数重载:名(){} 名(类 x){} 名(类1 x,类2 y){}
+根据不同传入参数情况执行对应版本,找最优者
++ 标准转换:①数组传给指针 指针传给const指针
+②char传给int float传给double
+③long long传给int double传给float nullptr传给任意类型的指针 任意类型的指针传给void<em> 多类型传给bool
++ 用户定义转换:①转换构造函数(性质) <code>类1(类2){}</code> 类2转换成类1
+&zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 加上explicit,只能传类2(只显式转换)
+&zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; ②自定义转换函数 类2里<code>operator 类1(){}</code>
+上下文转换:if while for ! &amp;&amp; || ?:要bool,不考虑explicit
++ for(auto/类 名:范围)用名; 遍历,元素作为名
++ 将亡值(xvalue)是右值,临时占内存 纯右值(prvalue)临时不占内存}可偷,可移动语义
+左值(lvalue)不临时占内存
+移动语义:获取右值,省去不必要的拷贝(偷)
+右值引用:类 &amp;&amp; 只绑定右值、本身是左值 (移动赋值运算符)
+<code>int z=6;可int &amp;x=z;int &amp;&amp;y=6;</code> &zwj; &zwj; &zwj; std::move(名)转换为右值
+static_cast&lt;类&gt;(名)类型转换
+类 函数名() &amp;或&amp;&amp;{} 调用左值时或调用右值时
++ 完美转发:(不丢失左值右值性)
+转发引用①auto &amp;&amp;②T &amp;&amp;(T为函数模板的参数)
+给参时,若为左值则为左值引用,否则为右值引用、转化为类 &amp;&amp;再返回(std::forward&lt;类&gt;(名))
+引用折叠:右值引用的右值引用为右值引用,否则为左值引用
+typename...类 类...名(可变参数模版) 类(名)...
+return先尝试以rvalue返回
++ 智能指针:(函数内得指针是否已删、或应在外删)
+智能:用delete还是delete[] 使用后自动销毁 指针是否为空
+垃圾回收:回收不可达的对象(数指针个数,为0时回收;Mark-and-sweep是否可返回)
+<code>#include&lt;memory&gt;</code>
+    + std::unique_ptr&lt;类&gt; 名(new ...)(可为类[]) 对象的唯一所有者,自动回收 只能移动不能拷贝 .get()获取原始指针 noexcept(不执行任何异常)
+也可auto 名=std::make_unique&lt;类&gt;(...)(可为类[],括号内为大小)
+传std::move(名)给</em>、&amp;、(const)智能指针(&amp;)
+    + 可能有多个shared_ptr指向同一对象,可被拷贝,对象无shared_ptr指向时被析构
+    std::make_shared&lt;类&gt;
++ 作用域屏蔽:子类、局部同名优先
+子类用using 基类::函数名; 可进行重载 &zwj; &zwj; &zwj; 子类对象.基类::a(找基类的a) __开头由编译器处理
+<code>include&lt;cstdlib&gt;</code> malloc返回void*
+new 分配空间且创造对象(可在中间给地址)(会自动用构造函数) delete回收
+<code>int* p=new int[n] stru* p=new stru、stru(6)、stru[]{1,2,3,4,5,6}</code> &zwj; &zwj; &zwj; <code>delete p、[]p</code></p>
+<h3 id="_1">类</h3>
+<p>class struct union 名{}; 
+封装:c++类中可有成员函数; 定义对象,可无struct或class
++ 类名::函数名 对象(状态+行为) 类里的变量、函数(内或外初始化,可默认赋值(末尾))
++ 访问说明符:public:成员可在类外访问 protected:子类定义、本身定义里可访问 privte:成员不能在类外访问、只能在类里用
+可在public定义函数来获取、使用private的成员
+class默认private &zwj; &zwj; &zwj; struct默认public
+可在类里用friend声明函数,则可访问private成员
+可见:基类有a,子类用a是基类a,即使有全局a
++ 继承:class 子类:public 基类{}; public/protected/private基类中成员级别高的会降
+子类构造中可用基类构造
++ 多态:(子类成员优先)调用同一函数自动取决于实际类型
++ 向上转型:基类用子类成员 子类实例赋给基类指针、引用
+子类对象赋给基类对象(对象切片)
++ 内联(默认):减少了调用函数的开销,编译器决定
++ 虚继承:<code>virtual public 基类</code>(多个基类继承一基类)
++ 虚函数:基类里<code>virtual 函数定义</code>
+子类里 <code>函数名(...) override(可无){...}</code>覆盖基类虚函数,还是虚函数
+虚调用:根据实际类型(指针指的类型)调用覆盖的最后一个版本 若为正常调用,根据静态类型(指针类型)
+例:传入shape*数组,有circle、rectangle等子类,调用draw函数则不同
+若=0,为纯虚数,不必有实现,可在外定义基本功能
+抽象类:存在至少一个纯虚函数,不能创对象、作返回类型,可视作接口(例shape)
++ class 类名 final{}; virtual...() final {}不能被继承或覆盖(可能优化)
++ 构造函数(可无)(初始化):类里 类名(...){} (应为public,可有参数)
+类 名;相当于类 名=类(); 有参数,直接 <code>类 名(参数值...);</code>
+int a(4); 有默认构造函数 可类名()=default(引入)/delete(删除)</p>
+<pre><code class="language-c++">用this-&gt;成员(对象的成员) this指向当前对象
+成员初始化列表:(编译器按定义顺序初始化)
+构造函数名(...):成员1(值1),...{}  (成员为对象时必用)
+</code></pre>
+<ul>
+<li>委托构造 a(int){} a():a(6){}</li>
+<li>析构函数: <code>~ 类名(){free...;}</code> 对象生命周期结束时调用,与析构顺序相反</li>
+<li>动态分配要delete析构:自动(局部)、块(main)结束时析构 静态(全局)、main结束时析构</li>
+<li>拷贝构造函数(同一类对象初始化当前对象)
+类里构造函数中第一个参数类型为<code>类 &amp;</code>或<code>const 类 &amp;</code>且无其它不默认参数
+可在<code>类 名1=名2</code>中调用 可=default/delete</li>
+<li>NRVO:命名返回值优化,直接构造而非构造再拷贝
+强制省略拷贝(直接构造)①返回类型与返回值同类型②初始化表达式同类型</li>
+<li>SMF:构造函数 移动构造函数 移动赋值运算符
+析构函数 拷贝构造函数 拷贝赋值运算符(rule of three)
+rule of zero:一个类要么只用来管理资源,要么就不涉及(如std::string代为管理字符串,不用自己写three SMFs)</li>
+<li>对象1=对象2 赋值 类1里定义类 operator=(类2 from){}用from-&gt;成员
+x=y视为x.operator=(y)
+大多运算符可重载(由类找运算符函数) 有参数为后置运算符
+x<em>y时会同时找<code>x.operator*(y)</code>(x类里)和<code>operator*(x,y)</code>(类外)
+若为int乘my,可定义my operator</em>(int x,my y){return y*x;}</li>
+<li>定义了function call operator的对象为函数对象(函数指针、重载了())</li>
+</ul>
+<h3 id="_2">模板</h3>
+<p>泛型编程:(编写类/函数的一个族(生成模式))
+可以#define 名 名1 &zwj; &zwj; &zwj; #include "文件"(用名) &zwj; &zwj; &zwj; #undef 名 但可能重复定义</p>
+<p>类模板<code>template&lt;typename或class T&gt; 定义类</code>(接受类型作为参数,可多个,可默认(末尾))
+函数模板<code>template&lt;typename或class T&gt; 定义函数</code>
+给出函数,生成类(特化)(隐式实例化)
+类\&lt;参数&gt;为类 &zwj; &zwj; &zwj; 函数\&lt;参数&gt;为函数(可运算符)
+可类型 x=函数&lt;&gt;(); &zwj; &zwj; &zwj; (模板参数推导,不考虑隐式转换)
+类外写类内函数:<code>返回类型 类\&lt;T&gt;::函数名(){}</code> (重载解析前)
+类可以有模板成员
+①显示特化:已有有参数的模板 再给无参数的实例
+<code>template&lt;typename T&gt; func或类 用T</code>
+<code>template&lt;&gt; func用特例 类用类&lt;类1&gt;{}</code>
+②偏特化:一些参数特定,其它参数不变
+③通用
+顺序①②③</p>
+<h3 id="stl">STL</h3>
+<pre><code class="language-c++">名.begin() 名.end()
+#include\&lt;vector&gt;   std::vector&lt;类&gt; 名;   名.push_back(元素)自动扩充
+#include&lt;algorithm&gt;   std::sort(左地址,右地址) [) 排序(升)
+可后加指定函数名,传入a、b真则a在b前 可后加std::greater&lt;类&gt;()降序
+std::find(左,右,元素)返回第一位的迭代器
+std::count(左,右,元素)   std::count_if(左,右,函数)
+std::for_each(左,右,函数(引用))
+std::reverse(左,右)   std::fill(左,右,元素)填充
+std::implace_merge(初,中,末)合并两有序序列
+std::max(...)   std::equal(s.begin(),s.begin+s.size()/2,s.rbegin())返回bool值
+std::set&lt;类&gt; 名(有序去重)   std::swap(a,b)
+</code></pre>
+<h3 id="_3">迭代器</h3>
+<p>作为容器和算法间信息传递的通用单元</p>
+<h1 id="include-vector">include\<iterator> 以vector为例</h1>
+<p><code>std::vector&lt;int&gt; v={1,2,3}
+for(std::vector&lt;int&gt;::iterator it=v.begin();it!=v.begin();++it){用*it}</code></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Network - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../LaTex/" class="nav-link">LaTex</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../algorithm/" class="nav-link">Algorithm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../c%2B%2B/" class="nav-link">C++</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../c/" class="nav-link">C</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../git/" class="nav-link">Git</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../markdown/" class="nav-link">Markdown</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Network</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../python/" class="nav-link">Python</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../terminal/" class="nav-link">Terminal</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../markdown/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../python/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>IPv6 广域网:如互联网 局域网:如家、校、公司
++ 一般局域网间的主机可相互访问,但不能直接访问互联网
+    + 需要一个路由器连接不同层级的网络
++ 一台主机可以有多个IP地址
+    + 如局域网主机可有多个局域网IP、公网IP
+    + 主机可有多个网卡,每个网卡可有多个IP地址
++ 回环地址:如127.0.0.1(IPv4)/::1(IPv6)/localhost(主机名) 由于主机自身通信
++ 网关:连接不同网络的设备
+    + 如路由器连接局域网和互联网
+    + 一般局域网主机的网关是路由器的IP地址
++ 子网:划分大IP地址为小IP地址
++ NAT(网络地址转换):将局域网多个主机共享一个公网IP地址
++ OSI七层模型:应用层:浏览器 &zwj; &zwj; &zwj; 表示层 &zwj; &zwj; &zwj; 会话层
+ &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 传输层:TCP UDP
+ &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 网络层:IP
+  &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 数据链路层:以太网/Wi-Fi &zwj; &zwj; &zwj; 物理层:网卡/路由器
++ TCP/IP四层模型: 应用层 &zwj; &zwj; &zwj; 传输层 &zwj; &zwj; &zwj; 网络层 &zwj; &zwj; &zwj; 链接层
++ TCP(传输控制协议):面向对接的协议,保证数据的顺序和可靠性
++ UDP(用户数据报协议):无连接,单向简单快速,不保证顺序可靠性
++ 端口:软件层面的通信端点,和IP地址构成网络通信的基础
+    + 端口号:0~65535,0~1023为系统保留端口一般不用于通网服务
+    + IP地址识别机器,端口号识别软件(服务)
+    + TCP、UDP端口号是分开的
+    通过端口号可以区分不同服务,如HTTP分配端口是TCP 80 &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; http://...即http://...:80 &zwj; &zwj; &zwj; 否则要指明
++ 域名:标识互联网上的计算机(一个身份),是用.分隔的字符串
+最右侧部分为顶级域名:.com .org .cn .net等,再往左为二级、三级域名等
+用于网络、邮箱等 &zwj; &zwj; &zwj; 可设置任意多的子域名(多级)
++ DNS(域名系统)协议:(可用<code>nslook 域名</code>查看)
++ 域名下可有任意多DNS记录:A记录(将域名映射到IPv4) &zwj; &zwj; &zwj; AAAA(IPv6) &zwj; &zwj; &zwj; MX(邮箱) &zwj; &zwj; &zwj; CNAME(别名) &zwj; &zwj; &zwj; TXT(文本信息)等
+TTL表示该记录的缓存时间 &zwj; &zwj; &zwj; 可<code>nslook -query=txt 域名</code>
++ 访问域名时,计算机会向DNS服务器查询域名对应的DNS记录
+    + DNS可能查询其它DNS服务器直至找到记录
+    + DNS一般会缓存查询结果,以减少查询时间,分配端口是TCP/UDP 53
++ 应用层协议HTTP(超文本传输协议),在客户端和服务器间传输网页
+可<code>nc IP地址 端口</code>建立TCP连接再<code>GET/HTTP/1.1   Host:域名</code>
++ 发起连接的节点是客户端,接受连接的节点是服务器
+客户端在本地选空闲端口连接到服务器的80端口
+DOS攻击:大量无效请求占用服务器资源,使合法请求无法被处理
+DDOS:分布式拒绝服务攻击,多攻击一
++ URL(统一资源定位符)属于URI 
+协议://主机:端口/路径/query=1#frag
+只含ASCII字符·百分号编码 空格为%20或+
++ <strong>HTTP请求</strong>:<code>nc 域名 端口      GET/... HTTP/1.1</code> <code>Host:域名</code>
+相当于访问<code>http//域名/...</code>
+访问方法:GET(获取资源) &zwj; &zwj; &zwj; POST(提交数据) &zwj; &zwj; &zwj; PUT(更新资源) &zwj; &zwj; &zwj; Delete(删除资源) &zwj; &zwj; &zwj; HEAD(获取资源头部)
+标头:键(如Host Content-Length、connection):值
+正文 请求体/响应体
+curl、wget更方便 -X指定请求方法 -d指定请求体</p>
+<h3 id="web">Web</h3>
+<h5 id="html">HTML(超文本标记语言)</h5>
+<p>command+shift+c打开网页HTML</p>
+<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;标题&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;/body&gt;&lt;/html&gt; 标签可有属性
+&lt;a href=&quot;链接&quot;&gt;文字 &lt;/a&gt;   &lt;img src=&quot;链接&quot;alt=&quot;文字&quot;&gt;(加载不出才用文字)
+</code></pre>
+<h5 id="javascript">Javascript(编程语言)</h5>
+<p>.js &zwj; &zwj; &zwj; 用于网页交互 \<script>标签引入</p>
+<h5 id="css">CSS(样式表语言)</h5>
+<p>层叠样式表 css选择器:规定css规则的应用元素</p>
+<pre><code class="language-CSS">body{font-family:...;   background-image:url('...');}
+&lt;link rel=&quot;stylesheet&quot; href=&quot;...&quot;&gt;
+</code></pre>
+<ul>
+<li>动态网页根据请求变动生成
+静态网页生成器:MkDocs Hexo Jekyll等
+构建界面的库:Tailwind CSS React Vue.js
+WordPress构建博客网站
+处理HTTP请求的软件:Apache Nginx IIS、编程语言的库等
+&zwj; </li>
+<li><strong>HTTPs</strong>:HTTP over TLS(传输层安全协议,可用于任何应用层协议) &zwj; &zwj; &zwj; 加密、认证、完整性保护
+密钥交换
+非对称密码学:RSA ECC
+TLS证书(数字签名的公钥) 由第三方者CA签发
+保证CA可信:由操作系统或浏览器内置的CA列表:根证书
+mTLS:mutual TLS &zwj; &zwj; &zwj; 客户端、服务器均向对方提供证书</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

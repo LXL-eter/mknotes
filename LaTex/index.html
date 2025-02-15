@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>LaTex - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">LaTex</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../algorithm/" class="nav-link">Algorithm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../c%2B%2B/" class="nav-link">C++</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../c/" class="nav-link">C</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../git/" class="nav-link">Git</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../markdown/" class="nav-link">Markdown</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../network/" class="nav-link">Network</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../python/" class="nav-link">Python</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../terminal/" class="nav-link">Terminal</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../algorithm/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>.tex 强调内容than样式
++ 命令(控制序列):以\开头 可用{}限定作用域,必需参数用{},可选参数用[]
+%注释 连续多空格为1空格</p>
+<pre><code class="language-LaTex">\documentclass{article}   %文档类
+%导言区:(preamble):加载宏包、定义命令、设置文档格式等
+\begin{document}   %文档开始
+%正文区(body):正文内容
+\input{文件名}   %可导入其它文件
+\end{document}   %文档终止
+</code></pre>
+<p>文档开头必包含\documentclass
++ 文档类(支持中文版):article(ctexart) report(ctexrep) book(ctexbook) beamer(ctexbeamer)等
+可选参数:\documentclass[12pt(字号),a4paper(纸号),twoside(打印)]{}
++ 宏包(第三方库):\usepackage{amsmath}数学 &zwj; &zwj; &zwj; \usepackage[final]{minted}代码高亮
++ 导言区:\title{}标题 &zwj; &zwj; &zwj; \author{}作者 &zwj; &zwj; &zwj; \date{}日期,默认为\today
+正文\maketitle生成标题页
++ 环境(控制格式):可用label{}标记(写成作用域:对象)
+    + 无序列表<code>\begin{itemize} \item 666 \item 6666 end{itemize}</code>
+    + enumerate:有序列表 &zwj; &zwj; &zwj; description:描述列表 \item[对象] 描述
+    + center:居中 &zwj; &zwj; &zwj; flushleft:左对齐&zwj; &zwj; &zwj; flushright:右对齐
+\centering后居中 &zwj; &zwj; &zwj; \raggedright后左对齐 &zwj; &zwj; &zwj; \raggedleft后右对齐
+    + tabular:表格 \begin{tabular}{l/c/r:左/中/右对齐}
+&amp;分隔列 &zwj; &zwj; &zwj; \换行 &zwj; &zwj; &zwj; \hline画横线
++ 段落:空行或\par分段,换行为空格,忽略行首空格 \或\newline分行 \newpage分页
+\verb字符内容字符(原样呈现) \verb*显示空格 verbatim环境·listing宏包代码高亮
++ 改字形:{\bfseries 作用域}作用域所有内容生效 &zwj; &zwj; &zwj; \textbf{参数} 参数内容生效
+<code>\textbf{}粗   \textsf{}细   \texttt{}较大   \textsc{}花式   texttit{}中式斜   \textsl{}英式斜</code>
++ 改大小:<code>{\tiny }   {\scriptsize }   {\footnotesize }   {\small }   {\normalsize }   {\large }   {\Large }   {\LARGE }   {\huge }   {\Huge }</code>
++ \转义 &zwj; &zwj; &zwj; \~{} \^{}防止将后面内容作为参数
+引号均编译为中式 &zwj; &zwj; &zwj; 中间加{}防止西文连字
++ -连字符 --短破折 ---长破折
++ 长度单位:em ex cm mm pt in 可负
++ 行距:<code>{\linespread{}\selectfont 内容}</code>
++ 水平间距:\hspace{}(可为fill,在左右间填空格) \quad为1em \qquad为2em
++ 垂直间距:\vspace{} \[]换行+垂直间距
++ 章节:\part{} \chapter{}仅用于book、report
+&zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; \section{} \subsection{} \subsubsection{}
+自动编号 &zwj; &zwj; &zwj; \tableofcontents生成目录 \appendix后为附录
++ 插图:用graphicx宏包 \inludegraphics[宽高选项]{路径或名}
+放figure环境里,为浮动体
++ 交叉引用:环境里\label{标记},再用 图\ref{标记}是...、\pageref{标记}页是...、式\eqref{标记}是...
++ 页大小、页边距:用geometry宏包
+\geometry{paper=a5paper}、{paperwidth=...,paperheight=...}、{margin=...}、{left=...,right=...,top=...,bottom=...}、{hmargin=...,vmargin=...}
++ 模版:预设好的文档类 放到同目录用</p>
+<h3 id="_1">数学公式</h3>
+<p>数学模式下用 用amsmath宏包 所有字母视为变量
+行内:\$...\$ 或 \(..\)
+行间:单行\[...\] equation环境
+ &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 多行align、gather环境
+不能空行分行 \text{}正常文本 基本()[]{} 上标^ 下标_
+求和:<code>\sum_{下标}^{上标}</code>
+分数:<code>\frac{分子}{分母}</code>
+极限:<code>\lim_{变量名\to 极限点}</code>
+调距:\, &zwj; &zwj; &zwj; \: &zwj; &zwj; &zwj; \! &zwj; &zwj; &zwj; \quad &zwj; &zwj; &zwj; \qquad
+\sin \cos \cos^2 \log \max
+\infty为无穷符号 &amp;对齐点 
+\alpha \beta \theta \Gamma \Delta \xi
+\sqrt[n]{x} 
+\dots ... &zwj; &zwj; &zwj; \vdots 三竖点 &zwj; &zwj; &zwj; \ddots三斜点
+\leq &lt;= &zwj; &zwj; &zwj; \neq 不等于 &zwj; &zwj; &zwj; \in 元素属于 &zwj; &zwj; &zwj; \subset 子集
+矩阵pmatrix环境 行列式vmatrix环境 用数字和&amp;
+\langle为&lt; &zwj; &zwj; &zwj; \rangle为&gt; &zwj; &zwj; &zwj; \vert为|
++ 与符号连用:自动调节大小 \left \right  &zwj; &zwj; &zwj; 手动:\big \Big \bigg \Bigg
++ 字:\mathrm{} 正式 &zwj; &zwj; &zwj; \mathit{} 斜 &zwj; &zwj; &zwj; \mathbf{} 粗 &zwj; &zwj; &zwj; \boldsymbol{} 斜粗 &zwj; &zwj; &zwj; \mathsf{} 圆润 &zwj; &zwj; &zwj; \mathtt{} 细圆润</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Python - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../LaTex/" class="nav-link">LaTex</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../algorithm/" class="nav-link">Algorithm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../c%2B%2B/" class="nav-link">C++</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../c/" class="nav-link">C</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../git/" class="nav-link">Git</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../markdown/" class="nav-link">Markdown</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../network/" class="nav-link">Network</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Python</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../terminal/" class="nav-link">Terminal</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../network/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../terminal/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>python解释型 交互式 面向对象
+.py pyhton 文件名 python3 (-i 文件名)可交互 quit退出
+| &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj;  &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj;  &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj;运算顺序|
+|:--|
+|&zwj; 1  &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; **
+|&zwj; 2 &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; ~ +(正) -(负) &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; |
+|&zwj; 3 &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; * / % //|
+|&zwj; 4 &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj;   + -|
+|&zwj; 5 &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &lt;&lt; &gt;&gt;|
+|&zwj; 6 &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &amp; |
+|&zwj; 7 &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; ^ ||
+|&zwj; 8 &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &gt; &lt; &gt;= &lt;=|
+|&zwj; 9 &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; == !=|
+|10 &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj;= %= /= //= -= == <em>= </em>*=|
+|11  &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; is is not|
+|12 &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; in not in|
+|13 &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; and or not|</p>
+<p>//向下取整 a=1 b=1 a is b and前假为前值，否则为后值 or前真为前值，否则为后值
+operator: &zwj; add+ &zwj; sub- &zwj; mul* &zwj; truediv/ &zwj; floordiv// &zwj; mod%
+gt(x,y)x&gt;y eq(x,y)x==y lt(x,y)x&lt;y
+&zwj; </p>
+<pre><code class="language-python">raw_input() input()(可评估串表达式) 回车结束不保留 
+会显示里面的内容 可赋给 输入信息当作字符串
+</code></pre>
+<pre><code class="language-python">print(*x,sep=' ',end='\n')   返回None(表示无),不显示
+                '%6.7f %s'%(x,s)
+% - + 0 m.n            d f c s o x,X e,E p
+print(None)-&gt;None print(print(6))-&gt;6 None
+                s.format() 
+'{1}...{0}...{1}'.format(,) {0}{1}看作对应位名的值
+'{名1}...{名2}'.format(名2=,名1=)
+'{:+.6f}'带符号保留六位小数
+'{:x&gt;yd}'左填x,y宽度 &lt;右填
+'{:&gt;xd}'右对齐(默认) '{:&lt;xd}'左对齐 '{:^xd}'中间对齐
+'{:,}',分割数   '{:.x%}'百分数,x位小数   '{:.xe}'指数,x位小数
+'{:b/d/o/x/#x}' b二进制,#带0o
+r'...'原始 f'...{名}...'
+</code></pre>
+<ul>
+<li>同一行多语句;分隔 缩进一致写语句 一句多行,末行前行末加\,[]{}()例外</li>
+<li>import sys sys.getsizeof(x)</li>
+<li>转义字符 del 删除</li>
+<li>函数内改、赋全局,用global声明,改、赋外部,用nonlocal声明(会被认为是局部的,则找不到)</li>
+<li>#单行注释 3双引号/3单引号内注释,&gt;&gt;&gt;测试文档 里有' ',外用''' '''</li>
+<li>from 模块 import 函数 (可as)直接用函数 import引入模块,用模块名.函数名</li>
+<li>赋值(不同步)·绑定:要定义 名=,再用,可x=y=6 后名覆盖前同名 
+名1,名2=值1,值2 右侧从左往右逐个评估再对应赋值
+可名=函数名,用名() 可max=7,max=f</li>
+</ul>
+<pre><code class="language-python">def 名():      *表示不定长参数  :后为注解
+    ... return 
+()前为operator,里为operand 可函数名给参数 可无参数,调用时要有()
+不返回则None   若赋值关键字,可不按顺序
+参数均评估,局部性,可默认赋值(关键字)
+可返回多个值,赋给多个名 
+函数里可再定义函数2、返回函数2
+def f(s=[]):s.append(6) 每调用一次均添6
+
+高阶函数:函数作为参数;返回函数
+def a(n):def b(k):return n+k return b c=a(3) c(4)、a(3)(4)为7
+def a(x):b=x def c(y):nonlocal b b-=y return b return c d=c d(y)改b
+变量从本地往父域找,取第一个 Global  a c
+                        f1 a    n b 返回b
+                        f2 b    k   返回n+k
+</code></pre>
+<p>assert 句,'信息' 句假才显示信息  &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 6(6)Error</p>
+<pre><code class="language-python">a=lambda x(参数):一个表达式(返回值) 用a(6),可多个参数
+(lambda x:x*x)(3)为9
+阶乘函数:
+(lambda f: f(f))(lambda f: lambda x: 1 if x == 0 else x * f(f)(x - 1)) 
+(lambda f: lambda k: f(f, k))(lambda f, k: k if k == 1 else mul(k, f(f, sub(k, 1))))
+currying=lambda f:lambda x: lambda y:f(x,y)   用currying(f)(a)(b)
+</code></pre>
+<pre><code class="language-python">def horse(mask):
+    horse = mask
+    def mask(horse):
+        return horse
+    return horse(mask)
+
+mask = lambda horse: horse(2)
+&gt;&gt;&gt; horse(mask)
+2
+</code></pre>
+<ul>
+<li>Decorators: &zwj; &zwj; &zwj; from ucb import trace或自定义 
+函数前加@trace相当于函数=trace(函数)
+<code>trace(f):def tra(x):print return f(x) return tra</code></li>
+</ul>
+<pre><code class="language-python">recursion:里面的函数要考虑能做什么,不要考虑如何实现
+print_all(x): print(x) return print_all
+print_sums(x):print(x) def next_sum(y) return print_sums(x+y)(会运行)   return next_sum
+sumdigits(n):if n&lt;10:return n else return sumdigits(n//10)+n%10
+cascade(n):顺 if n&lt;10:print(n) else print(n) cascade(n//10) print(n)
+           逆 grow(n) print(n) shrink(n) fg(f,g,n):if n: f(n);g(n)
+           grow=lambda n:fg(grow,print,n//10)
+           shrink=lambda n:fg(print,shrink,n//10)
+
+tree recursion:fib(n):if n==0:return 0 elif n==1:return 1 else:return fib(n-2)+fib(n-1)
+
+count_partitions(6,4)和因子&lt;=4{含4 不含4
+cp(n,m):if n==0:return 1 elif n&lt;0 or m==0:return 0 else:with_m=cp(n-m,m) without_m=cp(n,m-1) return with_m+without_m
+</code></pre>
+<ul>
+<li>range(x,y) [x,y) y-x为个数 range(x) [0,x) range(x,y,z)z为步长,默认为1</li>
+<li>a=[6] b=[6] 相等不相同 a=[6] b=a 相同,同时变</li>
+<li>不可变对象:整数、浮点数、串、元组,若尝试改变,实际上会创建新对象
+可变:列表、字典、集合</li>
+</ul>
+<h3 id="_1">条件 循环</h3>
+<p>假:False None 0 空字符串'' 空列表[] 空字典{} 空元组
+只一从句可写在同行 break continue pass空语句
+if :缩进 elif :缩进 else:缩进   按顺序执行,真则执行、忽略其余</p>
+<p>while :缩进 例:a,b,k=1,0,0 while k&lt;n:a,b,k=b,a+b,k+1
+可有else,while正常执行结束后(无跳出)执行else</p>
+<p><code>for 自定义名(可_或空白) in 序:(将名依次绑定到元素)</code>
+<code>for 名 in range(n):(n次)</code> <code>for index(len())</code> <code>for x,y in [[1,2],[3,4]]:(unpack)</code></p>
+<h4 id="_2">内置函数</h4>
+<p>类型转换 <code>int(x,base=10)</code>x为数,不能有base,为串则可有 
+<code>float(x)</code> &zwj; &zwj; &zwj; <code>complex(x,数)</code>x为串,不能有第二个参数 
+<code>str(x)</code>(人) <code>repr(x)</code>(解释器)均返回串 &zwj; &zwj; &zwj; &zwj; <code>eval(串)</code>评估表达式 
+<code>tuple(s)</code>返回元组 &zwj; &zwj; &zwj; <code>list(s)</code>返回列表 &zwj; &zwj; &zwj; <code>dict(s)</code>s应为(键,值)元组
+<code>set(s)</code>返回集合(不重复){} <code>frozenset(s)</code>不可变集合 A&amp;B交 A|B并 A-B差
+<code>chr(x)</code>数对应的字符 &zwj; &zwj; &zwj; <code>ord(x)</code>字符对应的数 &zwj; &zwj; &zwj; <code>hex(x)/oct(x)</code>对应的的十六/八进制字符串
+<code>id(x)</code>获取地址 &zwj; &zwj; &zwj; len() &zwj; &zwj; &zwj; abs(x) &zwj; &zwj; &zwj; <code>divmod(x,y)</code>商,余数 &zwj; &zwj; &zwj; <code>pow(x,y)</code>
+<code>sorted(对象,cmp,key,reverse=False)</code>
+<code>sum(序,start=0)</code>元素相加再加start,不能用于串    <code>sum([1,2],[3,4],[])</code> 
+<code>all(序)</code>均True才True <code>all([])</code>True &zwj; &zwj; &zwj; &zwj; <code>any(序)</code>有True就True
+<code>max(多个元素或序,key函数(可无))</code> <code>min</code>
+<code>round(x,y默认为0)x四舍五入,保留y位小数</code> &zwj; &zwj; <code>bin(x)</code>返回二进制表示串
+<code>isinstance(x,y)</code>判断x是否是y的同类或子类 <code>issubclass(x,y)</code>是否是子类
+<code>supper()</code>调用父类属性&zwj; &zwj; &zwj; <code>exec(串)</code>执行语句 &zwj; &zwj; &zwj; dir(名) &zwj; &zwj; &zwj; <code>reload(模板)</code>重新导入函数</p>
+<h4 id="_3">需导入模块的函数</h4>
+<h6 id="import-math-float">import math &zwj; &zwj; &zwj; (float型)</h6>
+<p>math. &zwj; <code>fabs(x)</code> &zwj; &zwj; <code>ceil(x)</code>上整数 &zwj; &zwj; <code>floor(x)</code>(下整数) &zwj; <code>exp(x)</code>e^x^  &zwj; &zwj; <code>log(x,y默认为e)</code>log~y~x
+<code>modf(x)</code>返回小数和整数部分 &zwj; <code>sqrt(x)</code> pi e
+<code>sin(a)</code> &zwj; <code>cos(a)</code> &zwj; <code>tan(a)</code> &zwj; <code>asin(a)</code> &zwj; <code>acos(a)</code> &zwj; <code>atan(a)</code> &zwj; <code>atan2(y,x)</code>
+&zwj; </p>
+<h6 id="import-random">import random</h6>
+<p>random. <code>choice(序)</code>随机一元素 &zwj; <code>randomrange()</code>随机一元素
+<code>random()</code>随机[0,1)的实数 &zwj; <code>uniform(x,y)</code>随机[x,y]的实数 &zwj; <code>shuffle(序)</code>随机排序,不返回
+&zwj; </p>
+<h6 id="import-time">import time</h6>
+<p><code>time.localtime(time.time()</code><a href="当前时间">^1</a>)[0]年[1]月[2]日[3]时[4]分[5]秒[6]一周第几天[7]一年第几天
+<code>time.asctime()</code>格式化</p>
+<h6 id="from-datetime-import-time">from datetime import time</h6>
+<p>d=<code>date(年,月,日)</code>或<code>date.today()</code>
+可用<code>d.year/month/day</code> &zwj; 可d2-d1差多少天
+<code>d.strftime("...")</code>%Y年 &zwj; &zwj; &zwj; %m月%b简月名%B全月名 &zwj;  &zwj; &zwj; %d月中的天%j年中的天
+%H时 &zwj; &zwj; &zwj; %M分 &zwj; &zwj; &zwj; %S秒 &zwj; &zwj; &zwj; %a简星期名%A全星期名%w星期(0~6)</p>
+<h6 id="import-calendar">import calendar</h6>
+<p>calendar. <code>calendar(年)</code> <code>month(年,月)</code> <code>isleap(年)</code></p>
+<h3 id="_4">列表</h3>
+<p>封闭 l=[...] 用l[i] 下标0~len(l)-1 
+可+ * in not in(判断单独元素) 切片
+元素为任何东西 直接传入函数,可改 可赋给对应个数的名
+l=[[1,2],[3,4]] l[1][1]为4 <code>[f(x) for x in 序 (if ...)]</code>新列表</p>
+<p><code>l.append(x)</code>末加 &zwj; &zwj; &zwj; <code>l.insert(索引,x)</code> &zwj; &zwj; &zwj; <code>l.extend(序)</code>末加
+<code>l.pop(index默认为-1)</code>移除l[index]并返回 &zwj; &zwj; &zwj; <code>l.remove(x)</code>
+<code>l.count(x)</code> &zwj; &zwj; &zwj; <code>l.index(x)</code>
+<code>l.sort(cmp,key,reverse=False)</code>False升True降 cmp方法 key用于比较的一个参数
+<code>l.reverse()</code>反向 &zwj; &zwj; &zwj; <code>l.[n:]=[]</code>删除</p>
+<p>切片 l[:y]表示[l[0],...l[y-1]] l[x:y] l[x:] l[:] [初:末:步长默认为1]
+s=[1,2] t=[3,4] s[0:0]=t s-&gt;3 4 1 2;s[3:]=t s-&gt;1 2 3 4 t[1]=5不改 (对列表整体改动则改值)</p>
+<h3 id="_5">字符串</h3>
+<p>s='...'或"..."(里可有'') 用s[i] 下标0\~len(s)-1、-len(s)\~-1
+可+ * in 切片 print(' '*6+str(6)) 可'...' in '......'</p>
+<p><code>s.upper()</code> <code>s.lower()</code> <code>s.swapcase()</code> 不改s
+<code>s.count(str,beg=0,end=len(s))</code> [ ) <code>s.find(str,beg=0,end=len(s))</code>否则-1 <code>s.replace(s1,s2,n默认s1出现次数)</code>替换至多n次</p>
+<h3 id="_6">字典</h3>
+<p>d={键:值,...} d[键]找值 d[新键]=值直接增加
+in 查键是否存在 可sum(键) for list
+键不能为1列表、字典(或含有),值可为多种东西 后键会覆盖前同名键
+<code>list(d)</code>键的序 <code>d.keys()</code> <code>d.values()</code> <code>d.items()</code> <code>d.pop(键)</code>
+<code>{f(x):g(x) for x in 序 (if ...)}</code>新字典
+例:<code>{k:[v for v in values if match(k,v)] for k in keys}</code></p>
+<h3 id="_7">元组</h3>
+<p>不可改 t=(,...)或,... 下标0~len-1 列表作为元素,可改列表内容 不影响元组
+可+ * in 切片 for</p>
+<h3 id="_8">迭代器(惰性)</h3>
+<p>可用next、for li=iter(l)返回迭代器,标记第一位 next(i)返回当前元素,标记后移一位
+<code>di=iter(d或d.keys())</code> &zwj; &zwj; &zwj; <code>di=iter(d.values())</code> &zwj; &zwj; &zwj; <code>di=iter(d.items())</code> next(di)为(键,值) 改d形状、大小后已生成的迭代器失效 
+<code>ri=iter(r)</code> &zwj; &zwj; &zwj; <code>for x in i</code>(遍历元素至末尾)</p>
+<p>返回迭代器,next产生效果:<code>map(函数,可迭代对象)</code>将函数用于元素(不改值)
+<code>filter(函数,可迭代对象)</code>函数值真则遍历元素,假则只移位
+<code>zip(对象1,对象2,...)</code>可遍历同索引的(x,y...)元组,取决于更短的
+<code>reversed(对象)</code>反向遍历
+<code>list(i)</code> <code>tuple(i)</code> <code>sorted(i)</code>返回排序后的 均会移至末尾
+例:<code>mi=map(函数1,范围) fi=filter(函数2,mi)</code>先应用再过滤
+<code>all(a==b for a,b in zip(s,reversed(s)))</code></p>
+<h6 id="_9">生成器</h6>
+<p>特殊的迭代器 yield(函数里产生值) yield from 对象(遍历产生)
+i=函数() next(i)可遍历产生的值 list(函数())列出所有产生的值</p>
+<pre><code class="language-python">例:part(n,m) if n&gt;0 and m&gt;0:
+                if n==m:yield str(m)
+                for p in part(n-m,m):yield p+'+'+str(m)
+                yield from part(n,m-1)
+</code></pre>
+<h3 id="_10">类</h3>
+<p>.访问属性 类-&gt;方法(对象+函数,也是属性) 加、乘 赋值查找
+<code>class 类名:def __init__(self,aholder):self.balance,self.holder=0,aholder</code> (构造方法)
+<code>def deposit(self,amount):self.balance+=balance return self.balance</code>(可输出,无也仍然改值)
+<code>类属性=...</code>
+self&lt;-a=类名(名)同时自动调用__init__ 可用a.balance a.holder
+a.新属性=...直接创造
+实例属性优先于类属性  &zwj; &zwj; &zwj; 有类.b,实例.b实则为添加实例属性
+对象.实例属性(改值不影响类) 类.类属性(改值会同步到对象)
+getAdder(对象)-&gt;属性 getadder(对象,属性) hasattr(对象,属性)是否有
+a.deposit(6)可赋给 可i=map(a.deposit,range(6,66))、next(i)
+类.方法(对象(可self),...)即对象.方法(...)</p>
+<p><strong>继承</strong> class 子类(基类):(子类继承基类)可更改 多重继承, ,...</p>
+<pre><code class="language-python">例:class chAccount(Account):interest=0.006 withdraw_fee=1
+def withdraw(self,amount) return Account.wihtdraw(self.amount+self.withdraw_fee)
+</code></pre>
+<p>一属性在子类有,则用,否则在基类中查找、执行</p>
+<p><strong>组合</strong>:将另一个对象作为属性</p>
+<pre><code class="language-python">class Bank:def __init__(self):self.accounts=[]
+def open_account(self,holder,amount,kind=Account):
+    account=kind(holder);account_deposit(amount);self.accounts.append(account) return account
+def pay_interest(self):for a in self.accounts:a.deposit(a.balance=a.intereat)
+</code></pre>
+<h3 id="_11">链表</h3>
+<pre><code class="language-python">class Link:empty=() def __init__(self,value,rest=empty):self.value,self.rest=value,rest
+创建:Link(6,Link(7,Link(8)))
+def rLink(sta,end):if sta&gt;=end: return Link.empty
+                   else: return Link(sta,range_Link(sta+1,end)) 
+def map_Link(f,s):if s is Link.empty:return s
+                  else return Link(f(s.value,map_Link(f,s.rest)))
+def filter_Link(f,s):if s is Link.empty:return s
+                     fil_rest=filter_Link(f,s.rest)
+                     if f(s.value):return Link(s.value,filter)
+                     else return fil_rest
+前接:s.value,s.rest=v,Link(s.value,s.rest)      s=Link(v,s)
+后接:s.rest=Link(v)
+</code></pre>
+<h3 id="_12">文件</h3>
+<p>同级目录下 名1下有__init__.py 包1 包2
+ &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; &zwj; 名2 from 名1.包1 import 包1
+ 文件:<code>fp=open(名,mode="r")</code>
+ mode: t文本 x只新建,写 b二进制 +打开读写
+ r打开只读 r+打开读写 w清空或创建, 只写 w+清空或创建,读写 a追加或创建,读写
+ fp.closed已关闭才True fp.mode fp.name &zwj; &zwj; &zwj; <code>fp.close()</code>
+ <code>fp.read</code>(字节数)默认全部 &zwj; &zwj; &zwj; <code>fp.write(串)</code> &zwj; &zwj; &zwj; <code>fp.tell()</code> &zwj; &zwj; &zwj; <code>fp.seek(偏移量,0/1/2)</code>该位置
+ <strong>import os</strong> <code>os.name(已存在文件名,新名)</code> <code>os.remove(文件名)</code>
+ <code>fp.flush()</code>缓冲区写入文件 <code>fp.next()</code>返回下行
+ <code>fp.readline(s,全部)</code>()读整行,包括'\n' &zwj; &zwj; &zwj; <code>fp.writeline(s,串列表)</code>要换行加'\n' &zwj; &zwj; &zwj; <code>execfile(文件名)</code>执行
+ ### Expasion
+data abstracion 有理数n/d from fractions import gcd 用<code>gcd(n,d)</code></p>
+<pre><code class="language-python">树 def tree(label,branches=[]:return [label]+list(branches))
+label(tree):return tree[0]      branches(tree):return tree[1:]
+is_leaf(tree):return not branches(tree)
+count_leaves(t):if is_leaf(t):return  1
+                else return sum([count_leaves(b) for b in branches(t)])
+
+class Tree:def __init__(self,label,branches=[]):self.label,self.branches=label,list(branches)
+</code></pre>
+<h6 id="memoizatin">Memoizatin</h6>
+<pre><code class="language-python">def memo(f):cache={} def memorized(n): if n not in cache:cache[n]=f(n) return memorized
+fib=memo(fib)
+</code></pre>
+<pre><code class="language-python">from fractions import Fraction 
+half=Fraction(1,2)
+repr(half)-&gt;'Fraction(1,2)'   str(half)-&gt;'1/2'   
+print(half)-&gt;1/2              eval(repr(half))-&gt;Fraction(1,2)
+</code></pre>
+<p>多态函数:适用于不同数据类型
+接口:共享的消息和规范(相同的方法)
+方法:<code>__str__ __repr__ __add__(左加右）、__radd__(右加左)即+ __bool__ __float__</code></p>
+<pre><code class="language-python">if n &lt; 0:
+    return []
+if n == 0:
+    sums_to_zero = [] # The only way to sum to zero using positives
+    return [sums_to_zero] # Return a list of all the ways to sum to zero
+result = []
+for k in range(1, m + 1):
+    result = result + [[k] + rest for rest in sums(n-k, m) if rest == [] or rest[0] != k]
+return result
+</code></pre>
+<p>Tips:
+避免重复,返回值作右值</p>
+<pre><code class="language-python">def max_product(s)
+if s == []: # empty set
+    return 1
+elif len(s) == 1: # single element
+    return s[0]
+else:
+    return max(s[0]*max_product(s[2:]),max_product(s[1:]))
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
